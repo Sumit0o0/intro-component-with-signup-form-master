@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <main>
+
+    <div id="container">
+
+      <!-- Heading Section -->
+      <div id="headingSection">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+          understanding how developers think is invaluable. </p>
+      </div>
+
+      <!-- form Section -->
+      <div id="formSection">
+
+        <div class="trybtn">
+          <p><span>Try it free 7 days </span>then $20/mo. thereafter</p>
+        </div>
+
+        <div class="formdiv">
+          <form action="" id="form" onsubmit="return validateform()" novalidate>
+            <ul>
+              <li>
+                <input type="text" name="firstName" id="firstName">
+                <label for="firstName">First Name</label>
+                <span class="">First Name cannot be empty</span>
+                <i><img src="./images/icon-error.svg"></i>
+              </li>
+              <li>
+                <input type="text" name="lastName" id="lastName">
+                <label for="lastName">Last Name</label>
+                <span class="">Last Name cannot be empty</span>
+                <i><img src="./images/icon-error.svg"></i>
+              </li>
+              <li>
+                <input type="email" name="emailAdd" id="emailAdd">
+                <label for="emailAdd">Email Address</label>
+                <span class="">email cannot be empty</span>
+                <i><img src="./images/icon-error.svg"></i>
+              </li>
+              <li>
+                <input type="password" name="password" id="password">
+                <label for="password">Password</label>
+                <span class="">Password cannot be empty</span>
+                <i><img src="./images/icon-error.svg"></i>
+              </li>
+            </ul>
+
+            <button type="submit" id="submitBtn">Claim your free trial </button>
+            <div>
+              <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

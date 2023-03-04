@@ -1,0 +1,262 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+/*********************************************************************/
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(./images/bg-intro-desktop.png);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+main {
+  height: 100vh;
+}
+
+#container {
+  padding: 0 5%;
+}
+
+#headingSection {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: auto;
+}
+
+.formdiv {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px #00000026;
+  box-shadow: 4px 4px 0px #00000038;
+  color: #000;
+  margin: 12px 0;
+}
+
+.trybtn {
+  padding: 11px 0;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 6px;
+  text-align: center;
+  margin: 18px 0;
+  box-shadow: 0px 0px 2px #00000026;
+  box-shadow: 4px 4px 0px #00000038;
+}
+
+.trybtn p span {
+  font-weight: 600;
+}
+
+.formdiv ul {
+  list-style: none;
+  padding: 0;
+}
+
+.formdiv li {
+  position: relative;
+  padding-top: 11px;
+  margin-top: 10px;
+}
+
+.formdiv li label {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-42%);
+  left: 14px;
+  cursor: text;
+}
+
+.formdiv input {
+  width: 100%;
+  padding: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid hsl(249, 10%, 26%);
+}
+
+.formdiv button {
+  width: 100%;
+  padding: 12px;
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  border-bottom: 3px solid hsl(154, 64%, 29%);
+  box-shadow: 0px 0px 3px #00000031;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 22px;
+}
+
+.formdiv button:hover {
+  background-color: hsl(154, 62%, 65%);
+}
+
+.formdiv input,
+button {
+  display: block;
+}
+
+.formdiv input.errborder {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+.formdiv li label.hidden {
+  visibility: hidden;
+}
+
+.formdiv li span.errorvisible {
+  visibility: visible;
+}
+
+#form li i.errorvisible {
+  visibility: visible;
+}
+
+form div p {
+  color: hsl(246, 25%, 77%);
+  font-size: 12px;
+  padding: 12px 0;
+  margin: 0 18px;
+  padding-bottom: 0;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.formdiv li span {
+  color: hsl(0, 100%, 74%);
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+#form li i {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-42%);
+  right: 10px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(./images/bg-intro-mobile.png);
+  }
+  #headingSection {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto 10px;
+    text-align: center;
+  }
+
+  .formdiv {
+    padding: 20px;
+  }
+
+  .trybtn {
+    padding: 2% 15%;
+  }
+
+  #container {
+    padding: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #headingSection {
+    width: 40%;
+    margin-right: 5%;
+  }
+
+  #headingSection h1 {
+    font-size: 3rem;
+    line-height: 100%;
+  }
+
+  #headingSection h1,
+  #headingSection p {
+    margin: auto;
+    margin: 12px auto;
+  }
+
+  #formSection {
+    margin-right: 5%;
+  }
+}
